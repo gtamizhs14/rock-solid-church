@@ -3463,7 +3463,7 @@ img {
   font-size: 160px;
   font-family: 'Playfair Display', serif;
   color: var(--primary-orange);
-  opacity: 0.08;
+  opacity: 0.13;
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -3511,6 +3511,10 @@ img {
 }
 
 /* Dark mode */
+[data-theme="dark"] .mission-section {
+  background: #181818;
+}
+
 [data-theme="dark"] .verse-section {
   background: #161616;
   border-color: rgba(255,255,255,0.06);
