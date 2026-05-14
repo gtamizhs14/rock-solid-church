@@ -179,6 +179,7 @@ AOS.init({
     grabCursor: true,
     touchAngle: 60,
     threshold: 3,
+    resistanceRatio: 0,
     pagination: {
       el: '.volunteer-pagination',
       clickable: true,
@@ -188,7 +189,7 @@ AOS.init({
       0: {
         slidesPerView: 2,
         spaceBetween: 12,
-        autoplay: { delay: 3000, disableOnInteraction: false },
+        autoplay: { delay: 3000, disableOnInteraction: true },
       },
       768: {
         slidesPerView: 4,
