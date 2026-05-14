@@ -863,7 +863,7 @@ img {
 }
 
 /* Volunteer card entrance — custom, no AOS (avoids Swiper transform conflict) */
-.volunteer-section:not(.vc-ready) .volunteer-card {
+.volunteer-section:not(.vc-ready):not(.vc-done) .volunteer-card {
   opacity: 0;
   transform: translateY(28px);
   transition: none;

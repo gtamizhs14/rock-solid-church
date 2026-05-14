@@ -157,7 +157,8 @@ AOS.init({
   if (!section || !swiper) return;
 
   function lockCards() {
-    section.classList.add('vc-done');
+    section.classList.add('vc-done');    // lock visible state first
+    section.classList.remove('vc-ready'); // then kill animation rules entirely
   }
 
   var obs = new IntersectionObserver(function (entries) {
@@ -165,18 +166,14 @@ AOS.init({
     section.classList.add('vc-ready');
     obs.disconnect();
 
-    // Lock final state after last card's animation completes
-    var cards = section.querySelectorAll('.volunteer-card');
-    var lastCard = cards[cards.length - 1];
-    if (lastCard) {
-      lastCard.addEventListener('animationend', lockCards, { once: true });
-    }
+    // Guaranteed lock after max animation duration (270ms delay + 550ms + 80ms buffer)
+    setTimeout(lockCards, 900);
 
-    // If user switches tabs mid-animation, lock immediately on return
-    document.addEventListener('visibilitychange', function onVisible() {
-      if (!document.hidden && section.classList.contains('vc-ready')) {
+    // If tab is hidden mid-animation, lock immediately so return has no replay
+    document.addEventListener('visibilitychange', function onHide() {
+      if (document.hidden) {
         lockCards();
-        document.removeEventListener('visibilitychange', onVisible);
+        document.removeEventListener('visibilitychange', onHide);
       }
     });
   }, { rootMargin: '0px 0px -60px 0px' });
