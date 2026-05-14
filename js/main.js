@@ -167,6 +167,11 @@ AOS.init({
   const el = document.querySelector('.volunteerSwiper');
   if (!el) return;
 
+  // Force-decode all volunteer images upfront so they never pop in async
+  document.querySelectorAll('.volunteer-card img').forEach(function (img) {
+    if (img.decode) img.decode().catch(function () {});
+  });
+
   new Swiper('.volunteerSwiper', {
     slidesPerView: 7,
     spaceBetween: 16,

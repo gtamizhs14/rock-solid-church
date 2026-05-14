@@ -811,7 +811,6 @@ img {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .volunteer-card img {
@@ -821,6 +820,7 @@ img {
   border-radius: 16px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   transform: translateZ(0);
+  will-change: transform;
 }
 
 @media (max-width: 767px) {
