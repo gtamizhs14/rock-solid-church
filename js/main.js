@@ -2,6 +2,25 @@
    ROCK SOLID CHURCH — Main JavaScript
    ============================================================ */
 
+// ---- Lenis smooth scroll ----
+var lenis = new Lenis({
+  duration: 1.2,
+  easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+  smoothTouch: false,
+});
+
+(function lenisRaf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(lenisRaf);
+})(0);
+
+// Wire Lenis into GSAP ScrollTrigger if available
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
+  gsap.ticker.lagSmoothing(0);
+}
+
 // ---- AOS (Animate On Scroll) ----
 AOS.init({
   duration: 800,
@@ -332,7 +351,7 @@ AOS.init({
   }, { passive: true });
 
   btn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    lenis.scrollTo(0);
   });
 })();
 
@@ -563,7 +582,7 @@ AOS.init({
       if (!target) return;
       e.preventDefault();
       var navH = (document.getElementById('mainNavbar') || {}).offsetHeight || 80;
-      window.scrollTo({ top: target.offsetTop - navH - 12, behavior: 'smooth' });
+      lenis.scrollTo(target, { offset: -navH - 12 });
     });
   });
 })();
