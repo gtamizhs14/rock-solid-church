@@ -799,6 +799,7 @@ img {
 /* Swiper volunteer */
 .volunteerSwiper {
   padding-bottom: 40px !important;
+  touch-action: pan-y;
 }
 
 
