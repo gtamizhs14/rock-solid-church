@@ -1362,7 +1362,6 @@ img {
   align-items: center;
   white-space: nowrap;
   animation: marqueeScroll 28s linear infinite;
-  animation-play-state: paused;
   will-change: transform;
 }
 
