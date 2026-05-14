@@ -4,21 +4,21 @@
 
 // ---- Lenis smooth scroll ----
 var lenis = new Lenis({
-  duration: 1.2,
+  duration: 0.9,
   easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
   smoothTouch: false,
 });
 
-(function lenisRaf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(lenisRaf);
-})(0);
-
-// Wire Lenis into GSAP ScrollTrigger if available
+// Use GSAP ticker if available, otherwise fall back to rAF — never both
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
   gsap.ticker.lagSmoothing(0);
+} else {
+  (function lenisRaf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(lenisRaf);
+  })(0);
 }
 
 // ---- AOS (Animate On Scroll) ----
