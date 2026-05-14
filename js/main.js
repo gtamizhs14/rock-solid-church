@@ -177,6 +177,8 @@ AOS.init({
     spaceBetween: 16,
     loop: false,
     grabCursor: true,
+    touchAngle: 60,
+    threshold: 3,
     pagination: {
       el: '.volunteer-pagination',
       clickable: true,
