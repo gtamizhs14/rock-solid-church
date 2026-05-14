@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Solid Christian Church</title>
+  <meta name="description" content="Rock Solid Christian Church — a thriving, diverse community gathering every Sunday. Join us for worship, connection, and faith in Anytown." />
+  <meta property="og:title" content="Rock Solid Christian Church" />
+  <meta property="og:description" content="A thriving, diverse community of real people experiencing real life together. All are welcome." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-logo" width="56" height="56" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="15" stroke="#ED4B1E" stroke-width="2"/>
+        <path d="M6 22 L16 8 L26 22 Z" fill="#ED4B1E" opacity="0.9"/>
+        <path d="M10 22 L16 14 L22 22 Z" fill="#ffffff" opacity="0.6"/>
+      </svg>
+      <p class="preloader-label">ROCK SOLID CHURCH</p>
+      <div class="preloader-bar-wrap"><div class="preloader-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- Full-screen overlay navigation -->
+  <div id="fsOverlay" class="fs-overlay" aria-hidden="true">
+    <button class="fs-close-btn" id="fsCloseBtn" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <nav class="fs-nav">
+      <ul class="fs-nav-list">
+        <li class="fs-nav-item"><a class="fs-nav-link" href="#" data-modal-target="#planVisitModal">Plan A Visit</a></li>
+        <li class="fs-nav-item"><a class="fs-nav-link" href="#welcome">Who We Are</a></li>
+        <li class="fs-nav-item"><a class="fs-nav-link" href="#connect">Connect</a></li>
+        <li class="fs-nav-item"><a class="fs-nav-link" href="#ministries">Ministries</a></li>
+        <li class="fs-nav-item"><a class="fs-nav-link" href="#events">Events</a></li>
+        <li class="fs-nav-item"><a class="fs-nav-link" href="#sermons">Media</a></li>
+      </ul>
+      <div class="fs-bottom">
+        <a href="#" class="btn btn-give fs-give-btn" data-modal-target="#giveOnlineModal">Give Online</a>
+        <div class="fs-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="site-navbar fixed-top" id="mainNavbar">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a class="brand-logo" href="#">
+        <div class="logo-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="15" stroke="#ED4B1E" stroke-width="2"/>
+            <path d="M6 22 L16 8 L26 22 Z" fill="#ED4B1E" opacity="0.9"/>
+            <path d="M10 22 L16 14 L22 22 Z" fill="#ffffff" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">ROCK SOLID</span>
+          <span class="brand-sub">CHRISTIAN CHURCH</span>
+        </div>
+      </a>
+
+      <!-- Desktop floating pill -->
+      <div class="nav-pill d-none d-lg-flex align-items-center">
+        <ul class="nav-links-list d-flex align-items-center list-unstyled mb-0">
+          <li><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#planVisitModal">Plan A Visit</a></li>
+          <li><a class="nav-link" href="#welcome">Who We Are</a></li>
+          <li><a class="nav-link" href="#connect">Connect</a></li>
+          <li><a class="nav-link" href="#ministries">Ministries</a></li>
+          <li><a class="nav-link" href="#events">Events</a></li>
+          <li><a class="nav-link" href="#sermons">Media</a></li>
+        </ul>
+        <a href="#" class="btn btn-give ms-3" data-bs-toggle="modal" data-bs-target="#giveOnlineModal">Give Online</a>
+        <button class="btn-hamburger-circle ms-2" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Right side -->
+      <div class="navbar-right d-flex align-items-center gap-3">
+        <a href="#" class="btn-live-watch d-none d-lg-flex align-items-center gap-2">
+          <span class="live-dot"></span>LIVE
+        </a>
+        <button class="btn-dark-toggle" id="darkToggleBtn" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="darkToggleIcon"></i>
+        </button>
+        <a href="#" class="btn-create-account d-none d-lg-flex align-items-center">
+          <i class="fa-regular fa-user"></i>
+          <span>Create Account</span>
+        </a>
+        <button class="custom-toggler d-lg-none" type="button" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile collapse menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="mobile-nav-inner">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#planVisitModal">Plan A Visit</a></li>
+          <li class="nav-item"><a class="nav-link" href="#welcome">Who We Are</a></li>
+          <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ministries">Ministries</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sermons">Media</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container text-center">
+      <h1 class="hero-heading animate-hero" data-delay="800">We're Glad You're Here</h1>
+      <p class="hero-subtitle animate-hero" data-delay="1100">
+        We are a thriving and diverse community of real people<br class="d-none d-md-block" /> experiencing real life together.
+      </p>
+      <div class="hero-buttons animate-hero" data-delay="1400">
+        <a href="#" class="btn btn-plan-visit" data-bs-toggle="modal" data-bs-target="#planVisitModal">Plan a Visit</a>
+        <a href="#welcome" class="btn btn-about-us">About Us</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator animate-hero" data-delay="2000">
+      <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="hero-bottom-bar animate-hero" data-delay="1700">
+      <div class="countdown-wrap">
+        <span class="countdown-label">Next Service Starts In:</span>
+        <div class="countdown-timer" id="countdown">00:00:00</div>
+      </div>
+      <div class="hero-social-icons">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WELCOME SECTION ===================== -->
+  <section id="welcome" class="welcome-section py-section bg-white">
+    <div class="container">
+      <p class="section-eyebrow text-center" data-aos="fade-up">WELCOME TO ROCK SOLID</p>
+
+      <div class="row g-5 align-items-start mb-5">
+        <div class="col-lg-6">
+          <h2 class="welcome-heading word-reveal">
+            Following the Holy Spirit, we exist to create a movement of disciple-making disciples.
+          </h2>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <p class="welcome-body">
+            Rock Solid Church is committed to creating a movement of disciple-making disciples—men and women who reflect the diversity of our community, lived out in authentic unity.
+          </p>
+        </div>
+      </div>
+
+      <div class="welcome-image-wrap clip-reveal">
+        <img
+          src="images/unnamed.jpg"
+          alt="Jesus Christ"
+          class="img-fluid welcome-full-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS STRIP ===================== -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="row g-0 text-center">
+
+        <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Active Members</p>
+        </div>
+
+        <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="12">0</span>
+          </div>
+          <p class="stat-label">Years Serving</p>
+        </div>
+
+        <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="7">0</span>
+          </div>
+          <p class="stat-label">Ministries</p>
+        </div>
+
+        <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="200">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Volunteers</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICE TIMES SECTION ===================== -->
+  <section class="service-times-section py-section">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="section-eyebrow">JOIN US</p>
+        <h2 class="svc-heading word-reveal">Service Times</h2>
+        <p class="svc-sub">We'd love to see you this Sunday. All are welcome.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="svc-card">
+            <div class="svc-icon"><i class="fa-solid fa-sun"></i></div>
+            <h3 class="svc-day">Sunday Morning</h3>
+            <p class="svc-times">9:00 AM &amp; 11:00 AM</p>
+            <p class="svc-location"><i class="fa-solid fa-location-dot me-1"></i>Main Sanctuary</p>
+            <a href="#" class="svc-btn" data-bs-toggle="modal" data-bs-target="#planVisitModal">Plan a Visit</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="svc-card svc-card--featured">
+            <div class="svc-icon"><i class="fa-solid fa-circle-play"></i></div>
+            <h3 class="svc-day">Sunday Online</h3>
+            <p class="svc-times">10:00 AM Live Stream</p>
+            <p class="svc-location"><i class="fa-solid fa-globe me-1"></i>rocksolidchurch.com</p>
+            <a href="#sermons" class="svc-btn">Watch Live</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="svc-card">
+            <div class="svc-icon"><i class="fa-solid fa-moon"></i></div>
+            <h3 class="svc-day">Wednesday Night</h3>
+            <p class="svc-times">7:00 PM</p>
+            <p class="svc-location"><i class="fa-solid fa-location-dot me-1"></i>Community Hall</p>
+            <a href="#" class="svc-btn">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MISSION SECTION ===================== -->
+  <section class="mission-section py-section">
+    <div class="container">
+      <div class="mission-card-outer">
+        <!-- Background wave SVG -->
+        <div class="mission-wave-bg" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,100 C150,200 350,0 600,100 C850,200 1050,0 1200,100 L1200,400 L0,400 Z" fill="rgba(255,255,255,0.05)"/>
+            <path d="M0,200 C200,300 400,100 600,200 C800,300 1000,100 1200,200 L1200,400 L0,400 Z" fill="rgba(255,255,255,0.04)"/>
+          </svg>
+        </div>
+
+        <div class="text-center mb-5">
+          <h2 class="mission-title word-reveal">Our Mission is Simple</h2>
+          <p class="mission-subtitle" data-aos="fade-up">
+            <strong>The gospel is the good news of Jesus:</strong> That Jesus lived a sinless life in my place, died the death that
+          </p>
+        </div>
+
+        <!-- Three cards -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="mission-card">
+              <div class="mission-card-icon">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h3 class="mission-card-title">Watch a Message</h3>
+              <p class="mission-card-body">Catch up on the latest and past weekend service messages anytime, anywhere.</p>
+              <a href="#" class="mission-card-link">Catch Our Latest Message <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="mission-card">
+              <div class="mission-card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h3 class="mission-card-title">Find a Location</h3>
+              <p class="mission-card-body">Easily find a campus near you. Join us in person and get connected.</p>
+              <a href="#" class="mission-card-link">Search Our Campuses <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="mission-card">
+              <div class="mission-card-icon">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+              <h3 class="mission-card-title">Get Connected</h3>
+              <p class="mission-card-body">Stay connected and in the loop—sign up for updates, events, and ways to get involved.</p>
+              <a href="#" class="mission-card-link">Contact Us <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gospel subsection -->
+        <div class="gospel-subsection">
+          <div class="row g-5 align-items-center mb-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <p class="gospel-eyebrow">GOSPEL</p>
+              <h3 class="gospel-heading">
+                The gospel is what should characterize us. It should be our identity: We are a gospel people.
+              </h3>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+              <p class="gospel-body">
+                <strong>The gospel is the good news of Jesus:</strong> That Jesus lived a sinless life in my place, died the death that I deserved, and rose to life again. And whoever believes in him has eternal life.
+              </p>
+            </div>
+          </div>
+          <div class="gospel-image-wrap clip-reveal">
+            <img
+              src="https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=1400&q=90"
+              alt="Cross against golden sky"
+              class="img-fluid gospel-full-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+      </div><!-- end mission-card-outer -->
+    </div>
+  </section>
+
+  <!-- ===================== SERMONS SECTION ===================== -->
+  <section id="sermons" class="sermons-section py-section">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="section-eyebrow">RECENT MESSAGES</p>
+        <h2 class="sermons-heading word-reveal">Watch &amp; Listen</h2>
+        <p class="sermons-subtitle">Catch up on the latest messages from Rock Solid Church.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="sermon-card" data-video-id="dy9nwe9keis">
+            <div class="sermon-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="When God Feels Far Away" class="sermon-thumb" loading="lazy" />
+              <button class="sermon-play-btn" aria-label="Play sermon"><i class="fa-solid fa-play"></i></button>
+              <span class="sermon-series-tag">Living Faith</span>
+            </div>
+            <div class="sermon-body">
+              <h3 class="sermon-title">When God Feels Far Away</h3>
+              <p class="sermon-meta">Pastor James Reid &nbsp;·&nbsp; May 11, 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="sermon-card" data-video-id="dy9nwe9keis">
+            <div class="sermon-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80" alt="Rooted in Grace" class="sermon-thumb" loading="lazy" />
+              <button class="sermon-play-btn" aria-label="Play sermon"><i class="fa-solid fa-play"></i></button>
+              <span class="sermon-series-tag">Living Faith</span>
+            </div>
+            <div class="sermon-body">
+              <h3 class="sermon-title">Rooted in Grace</h3>
+              <p class="sermon-meta">Pastor James Reid &nbsp;·&nbsp; May 4, 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="sermon-card" data-video-id="dy9nwe9keis">
+            <div class="sermon-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&q=80" alt="The Power of Together" class="sermon-thumb" loading="lazy" />
+              <button class="sermon-play-btn" aria-label="Play sermon"><i class="fa-solid fa-play"></i></button>
+              <span class="sermon-series-tag">Community</span>
+            </div>
+            <div class="sermon-body">
+              <h3 class="sermon-title">The Power of Together</h3>
+              <p class="sermon-meta">Pastor Sarah Collins &nbsp;·&nbsp; Apr 27, 2025</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="#" class="btn btn-all-messages">View All Messages <i class="fa-solid fa-arrow-right ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="cta-section py-section">
+    <div class="container text-center">
+      <div class="cta-heading-wrap" data-aos="fade-up">
+        <h2 class="cta-heading">
+          <span class="cta-dark">ROCK SOLID CHURCH CONTINUES</span><br />
+          <span class="cta-dark">TO HOLD OUT </span><span class="cta-orange">LOVE</span><span class="cta-dark"> AND HOPE TO</span><br />
+          <span class="cta-grey">THE ENTIRE WORLD.</span>
+        </h2>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <a href="#" class="btn btn-cta-plan" data-bs-toggle="modal" data-bs-target="#planVisitModal">Plan a Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE TICKER ===================== -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">FAITH</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">COMMUNITY</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">HOPE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">LOVE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">SERVE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">GRACE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">TOGETHER</span><span class="marquee-sep">·</span>
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      <span class="marquee-item">FAITH</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">COMMUNITY</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">HOPE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">LOVE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">SERVE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">GRACE</span><span class="marquee-sep">·</span>
+      <span class="marquee-item">TOGETHER</span><span class="marquee-sep">·</span>
+    </div>
+  </div>
+
+  <!-- ===================== VOLUNTEER SECTION ===================== -->
+  <section id="ministries" class="volunteer-section py-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="volunteer-icon-wrap" data-aos="fade-up">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <h2 class="volunteer-heading word-reveal">Find a Place to Volunteer</h2>
+        <p class="volunteer-subtitle" data-aos="fade-up" data-aos-delay="200">
+          Explore our ministries—find your place, grow in faith, and connect with a vibrant community!
+        </p>
+      </div>
+
+      <!-- Swiper carousel -->
+      <div class="swiper volunteerSwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide volunteer-slide">
+            <div class="volunteer-card">
+              <img src="https://images.unsplash.com/photo-1609234656388-0ff363383899?w=800&q=90" alt="Prayer &amp; Care" loading="eager" />
+              <span class="volunteer-label">Prayer &amp; Care</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide volunteer-slide">
+            <div class="volunteer-card">
+              <img src="images/kids.jpg" alt="Kids" loading="eager" />
+              <span class="volunteer-label">Kids</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide volunteer-slide">
+            <div class="volunteer-card">
+              <img src="images/students.jpg" alt="Students" loading="eager" />
+              <span class="volunteer-label">Students</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide volunteer-slide">
+            <div class="volunteer-card volunteer-card--active">
+              <img src="images/worship.jpg" alt="Worship" loading="eager" />
+              <span class="volunteer-label">Worship <i class="fa-solid fa-arrow-right ms-1"></i></span>
+            </div>
+          </div>
+
+          <div class="swiper-slide volunteer-slide">
+            <div class="volunteer-card">
+              <img src="images/men.jpg" alt="Men" loading="eager" />
+              <span class="volunteer-label">Men</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide volunteer-slide">
+            <div class="volunteer-card">
+              <img src="images/women.jpg" alt="Women" loading="eager" />
+              <span class="volunteer-label">Women</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide volunteer-slide">
+            <div class="volunteer-card">
+              <img src="images/small groups.jpg" alt="Small Groups" loading="eager" />
+              <span class="volunteer-label">Small Groups</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination volunteer-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVENTS SECTION ===================== -->
+  <section id="events" class="events-section py-section">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="section-eyebrow">MARK YOUR CALENDAR</p>
+        <h2 class="events-heading word-reveal">Upcoming Events</h2>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="event-card">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Sunday Worship" class="event-img" loading="lazy" />
+              <div class="event-date-badge">
+                <span class="event-month">JUN</span>
+                <span class="event-day">15</span>
+              </div>
+            </div>
+            <div class="event-body">
+              <span class="event-tag">Worship</span>
+              <h3 class="event-title">Sunday Morning Service</h3>
+              <p class="event-meta"><i class="fa-regular fa-clock me-1"></i>10:00 AM – 11:30 AM</p>
+              <p class="event-meta"><i class="fa-solid fa-location-dot me-1"></i>Main Campus</p>
+              <a href="#" class="event-link">Register Now <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="event-card">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&q=80" alt="Youth Summer Camp" class="event-img" loading="lazy" />
+              <div class="event-date-badge">
+                <span class="event-month">JUN</span>
+                <span class="event-day">22</span>
+              </div>
+            </div>
+            <div class="event-body">
+              <span class="event-tag">Youth</span>
+              <h3 class="event-title">Youth Summer Camp 2025</h3>
+              <p class="event-meta"><i class="fa-regular fa-clock me-1"></i>Jun 22 – Jun 27</p>
+              <p class="event-meta"><i class="fa-solid fa-location-dot me-1"></i>Desert Retreat Center</p>
+              <a href="#" class="event-link">Register Now <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="event-card">
+            <div class="event-img-wrap">
+              <img src="https://images.unsplash.com/photo-1508367231051-dbfe726a5079?w=600&q=80" alt="Community Prayer Night" class="event-img" loading="lazy" />
+              <div class="event-date-badge">
+                <span class="event-month">JUL</span>
+                <span class="event-day">4</span>
+              </div>
+            </div>
+            <div class="event-body">
+              <span class="event-tag">Prayer</span>
+              <h3 class="event-title">Community Prayer Night</h3>
+              <p class="event-meta"><i class="fa-regular fa-clock me-1"></i>7:00 PM – 9:00 PM</p>
+              <p class="event-meta"><i class="fa-solid fa-location-dot me-1"></i>All Campuses</p>
+              <a href="#" class="event-link">Register Now <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEXT STEPS SECTION ===================== -->
+  <section class="next-steps-section py-section">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="section-eyebrow">GET STARTED</p>
+        <h2 class="next-steps-heading word-reveal">Your Next Steps</h2>
+        <p class="next-steps-sub">No matter where you are in your faith journey, there's a next step for you.</p>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="nxt-card">
+            <div class="nxt-num">01</div>
+            <div class="nxt-icon"><i class="fa-solid fa-church"></i></div>
+            <h3 class="nxt-title">Plan a Visit</h3>
+            <p class="nxt-body">Come see us this Sunday. We'll have someone ready to welcome you.</p>
+            <a href="#" class="nxt-link" data-bs-toggle="modal" data-bs-target="#planVisitModal">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="nxt-card">
+            <div class="nxt-num">02</div>
+            <div class="nxt-icon"><i class="fa-solid fa-hands-praying"></i></div>
+            <h3 class="nxt-title">Get Baptized</h3>
+            <p class="nxt-body">Ready to make your faith public? Baptism is a powerful next step.</p>
+            <a href="#" class="nxt-link">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="nxt-card">
+            <div class="nxt-num">03</div>
+            <div class="nxt-icon"><i class="fa-solid fa-users"></i></div>
+            <h3 class="nxt-title">Join a Group</h3>
+            <p class="nxt-body">Life is better in community. Find a small group that fits your life.</p>
+            <a href="#" class="nxt-link">Find a Group <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="nxt-card">
+            <div class="nxt-num">04</div>
+            <div class="nxt-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3 class="nxt-title">Start Serving</h3>
+            <p class="nxt-body">Use your gifts to make a difference. Discover where you belong.</p>
+            <a href="#" class="nxt-link">Volunteer <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STORIES SECTION ===================== -->
+  <section class="stories-outer py-section">
+    <div class="container">
+      <div class="stories-card">
+        <div class="row g-4 stories-row">
+
+          <!-- Left: copy + fourth story image -->
+          <div class="col-lg-4 d-flex flex-column" data-aos="fade-right" data-aos-delay="0">
+            <h2 class="stories-heading">
+              Saved Lives Are<br />Changed Lives.
+            </h2>
+            <p class="stories-body">
+              Feature stories about how Rock Solid Church is making a difference in our city.
+            </p>
+            <div class="mt-4 mb-4">
+              <a href="#" class="btn btn-share-story">Share Your Story</a>
+            </div>
+            <div class="story-img-wrap story-img-fourth">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
+                alt="Finding Grace"
+                loading="lazy"
+              />
+              <span class="story-caption">Finding Grace</span>
+            </div>
+          </div>
+
+          <!-- Middle: large image fills full column height -->
+          <div class="col-lg-4 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+            <div class="story-img-wrap story-img-tall">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+                alt="Joshua's Road to Peace"
+                loading="lazy"
+              />
+              <span class="story-caption">Joshua's Road to Peace</span>
+            </div>
+          </div>
+
+          <!-- Right: two stacked images -->
+          <div class="col-lg-4 d-flex flex-column gap-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="story-img-wrap story-img-half">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=90"
+                alt="By Any Means Necessary"
+                loading="lazy"
+              />
+              <span class="story-caption">By Any Means Necessary</span>
+            </div>
+            <div class="story-img-wrap story-img-half">
+              <img
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80"
+                alt="Holding on to Hope"
+                loading="lazy"
+              />
+              <span class="story-caption">Holding on to Hope</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWSLETTER SECTION ===================== -->
+  <section id="connect" class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner" data-aos="fade-up">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <p class="newsletter-eyebrow">STAY CONNECTED</p>
+            <h2 class="newsletter-heading">Never Miss What God Is Doing</h2>
+            <p class="newsletter-sub">Weekly devotionals, event updates, and church news delivered to your inbox.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <input type="email" class="newsletter-input" placeholder="Enter your email address" required />
+              <button type="submit" class="newsletter-btn">Subscribe <i class="fa-solid fa-paper-plane ms-1"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Toast -->
+  <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index: 11000;">
+    <div id="newsletterToast" class="toast align-items-center border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="fa-solid fa-circle-check me-2" style="color:#ED4B1E;"></i>You're in! Welcome to the Rock Solid family.
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="container">
+
+      <!-- Top row -->
+      <div class="footer-top d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <a href="#" class="brand-logo footer-brand">
+          <div class="logo-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" stroke="#ED4B1E" stroke-width="2"/>
+              <path d="M6 22 L16 8 L26 22 Z" fill="#ED4B1E" opacity="0.9"/>
+              <path d="M10 22 L16 14 L22 22 Z" fill="#ffffff" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name footer-brand-name">ROCK SOLID</span>
+            <span class="brand-sub footer-brand-sub">CHRISTIAN CHURCH</span>
+          </div>
+        </a>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#" class="btn btn-footer-plan" data-bs-toggle="modal" data-bs-target="#planVisitModal">PLAN A VISIT</a>
+          <a href="#" class="btn btn-footer-login">Log In</a>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <!-- Middle row -->
+      <div class="row g-4 footer-middle">
+        <!-- Col 1: address + social -->
+        <div class="col-lg-3 col-md-6">
+          <address class="footer-address">
+            11340 W. Bell Road, Suite 200<br />
+            Surprise, AZ 85378<br />
+            <a href="tel:0000000000">(000) 000-0000</a>
+          </address>
+          <div class="footer-social-icons mt-3">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: spacer -->
+        <div class="col-lg-3 d-none d-lg-block"></div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="col-lg-2 col-md-3 col-6">
+          <p class="footer-col-label">QUICK LINKS</p>
+          <ul class="footer-links">
+            <li><a href="#">About Rock Solid</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Ministries</a></li>
+            <li><a href="#">Serving</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Get in Touch -->
+        <div class="col-lg-2 col-md-3 col-6">
+          <p class="footer-col-label">GET IN TOUCH</p>
+          <ul class="footer-links">
+            <li><a href="#">Plan a Visit Request</a></li>
+            <li><a href="#">Prayer</a></li>
+            <li><a href="#">Get Help</a></li>
+            <li><a href="#">Job Openings</a></li>
+            <li><a href="#">Report an Issue</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="footer-bottom text-center">
+        <p class="footer-legal">&copy; 2025 &nbsp;|&nbsp; <a href="#">Terms of Service</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Plan a Visit Modal -->
+  <div class="modal fade" id="planVisitModal" tabindex="-1" aria-labelledby="planVisitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content pv-modal-content">
+        <div class="pv-modal-header">
+          <button type="button" class="pv-modal-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <h2 class="pv-modal-title" id="planVisitModalLabel">Plan A Visit</h2>
+          <p class="pv-modal-sub">We'd love to have you! Fill in your details and we'll help you get ready for your first Sunday.</p>
+        </div>
+        <div class="pv-modal-body" id="pvFormWrap">
+          <form id="planVisitForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="pv-label">First Name *</label>
+                <input type="text" class="pv-input" placeholder="John" required />
+              </div>
+              <div class="col-md-6">
+                <label class="pv-label">Last Name</label>
+                <input type="text" class="pv-input" placeholder="Smith" />
+              </div>
+              <div class="col-12">
+                <label class="pv-label">Email Address *</label>
+                <input type="email" class="pv-input" placeholder="john@example.com" required />
+              </div>
+              <div class="col-12">
+                <label class="pv-label">Which service would you like to attend?</label>
+                <select class="pv-input pv-select">
+                  <option value="">Choose a service time</option>
+                  <option>Sunday Morning — 9:00 AM</option>
+                  <option>Sunday Morning — 11:00 AM</option>
+                  <option>Sunday Online — 10:00 AM Live Stream</option>
+                  <option>Wednesday Night — 7:00 PM</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="pv-label">How did you hear about us?</label>
+                <select class="pv-input pv-select">
+                  <option value="">Select an option</option>
+                  <option>Friend or Family</option>
+                  <option>Social Media</option>
+                  <option>Online Search</option>
+                  <option>Drove By</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="pv-submit-btn">I'm Planning to Visit <i class="fa-solid fa-arrow-right ms-2"></i></button>
+          </form>
+        </div>
+        <div class="pv-success" id="pvSuccess">
+          <div class="pv-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3 class="pv-success-title">See You Sunday!</h3>
+          <p class="pv-success-body">Thanks for planning your visit. We can't wait to welcome you — we'll send everything you need before you arrive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Give Online Modal -->
+  <div class="modal fade" id="giveOnlineModal" tabindex="-1" aria-labelledby="giveOnlineModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content give-modal-content">
+        <div class="give-modal-header">
+          <button type="button" class="pv-modal-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <h2 class="give-modal-title" id="giveOnlineModalLabel">Give Online</h2>
+          <p class="give-modal-sub">Your generosity changes lives. Thank you for giving to Rock Solid Church.</p>
+        </div>
+        <div class="give-modal-body">
+          <p class="give-label">Select Amount</p>
+          <div class="give-amounts">
+            <button class="give-amount-btn" data-amount="25">$25</button>
+            <button class="give-amount-btn give-amount-btn--active" data-amount="50">$50</button>
+            <button class="give-amount-btn" data-amount="100">$100</button>
+            <button class="give-amount-btn" data-amount="250">$250</button>
+          </div>
+          <div class="give-custom-wrap">
+            <span class="give-dollar">$</span>
+            <input type="number" class="give-custom-input" placeholder="Custom amount" min="1" />
+          </div>
+          <p class="give-label mt-4">Giving Towards</p>
+          <div class="give-funds">
+            <label class="give-fund-option">
+              <input type="radio" name="giveType" value="general" checked /> <span>General Fund</span>
+            </label>
+            <label class="give-fund-option">
+              <input type="radio" name="giveType" value="missions" /> <span>Missions</span>
+            </label>
+            <label class="give-fund-option">
+              <input type="radio" name="giveType" value="building" /> <span>Building Fund</span>
+            </label>
+          </div>
+          <button class="give-submit-btn" id="giveNowBtn">
+            Give Now <i class="fa-solid fa-heart ms-2"></i>
+          </button>
+          <p class="give-secure"><i class="fa-solid fa-lock me-1"></i>Secure &amp; Encrypted</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sermon Video Modal -->
+  <div class="modal fade" id="sermonModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content sermon-modal-content">
+        <button type="button" class="sermon-modal-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="sermon-video-container">
+          <iframe id="sermonFrame" src="" title="Sermon Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <button class="chatbot-fab" id="chatbotBtn" aria-label="Chat with us">
+    <i class="fa-solid fa-comment-dots chatbot-fab-icon"></i>
+    <i class="fa-solid fa-xmark chatbot-fab-close"></i>
+  </button>
+
+  <div class="chat-panel" id="chatPanel" aria-hidden="true">
+    <div class="chat-panel-header">
+      <div class="chat-panel-logo">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" stroke="#ED4B1E" stroke-width="2"/>
+          <path d="M6 22 L16 8 L26 22 Z" fill="#ED4B1E" opacity="0.9"/>
+          <path d="M10 22 L16 14 L22 22 Z" fill="#ffffff" opacity="0.6"/>
+        </svg>
+        <div>
+          <p class="chat-panel-name">Rock Solid Church</p>
+          <p class="chat-panel-status"><span class="chat-online-dot"></span>Here to help</p>
+        </div>
+      </div>
+      <button class="chat-close-btn" id="chatCloseBtn" aria-label="Close chat">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-quick-replies" id="chatQuickReplies"></div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5.3 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
