@@ -179,7 +179,7 @@ AOS.init({
     grabCursor: true,
     touchAngle: 60,
     threshold: 3,
-    resistanceRatio: 0,
+    resistanceRatio: 0.3,
     pagination: {
       el: '.volunteer-pagination',
       clickable: true,

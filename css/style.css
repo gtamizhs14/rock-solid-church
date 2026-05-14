@@ -802,6 +802,10 @@ img {
   touch-action: pan-y;
 }
 
+.volunteerSwiper .swiper-wrapper {
+  touch-action: pan-y;
+}
+
 
 .volunteer-slide {
   height: auto;
