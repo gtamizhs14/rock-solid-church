@@ -150,37 +150,6 @@ AOS.init({
   });
 })();
 
-// ---- Volunteer section entrance ----
-(function initVolunteerReveal() {
-  var section = document.querySelector('.volunteer-section');
-  var swiper  = document.querySelector('.volunteerSwiper');
-  if (!section || !swiper) return;
-
-  function lockCards() {
-    section.classList.add('vc-done');    // lock visible state first
-    section.classList.remove('vc-ready'); // then kill animation rules entirely
-  }
-
-  var obs = new IntersectionObserver(function (entries) {
-    if (!entries[0].isIntersecting) return;
-    section.classList.add('vc-ready');
-    obs.disconnect();
-
-    // Guaranteed lock after max animation duration (270ms delay + 550ms + 80ms buffer)
-    setTimeout(lockCards, 900);
-
-    // If tab is hidden mid-animation, lock immediately so return has no replay
-    document.addEventListener('visibilitychange', function onHide() {
-      if (document.hidden) {
-        lockCards();
-        document.removeEventListener('visibilitychange', onHide);
-      }
-    });
-  }, { rootMargin: '0px 0px -60px 0px' });
-
-  obs.observe(swiper);
-})();
-
 // ---- GSAP hero parallax ----
 (function initHeroParallax() {
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;

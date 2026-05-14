@@ -862,34 +862,6 @@ img {
   background: var(--primary-orange);
 }
 
-/* Volunteer card entrance — custom, no AOS (avoids Swiper transform conflict) */
-.volunteer-section:not(.vc-ready):not(.vc-done) .volunteer-card {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: none;
-  will-change: opacity, transform;
-}
-
-@keyframes vcFadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.volunteer-section.vc-ready .swiper-slide:nth-child(1) .volunteer-card { animation: vcFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1)   0ms both; }
-.volunteer-section.vc-ready .swiper-slide:nth-child(2) .volunteer-card { animation: vcFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1)  45ms both; }
-.volunteer-section.vc-ready .swiper-slide:nth-child(3) .volunteer-card { animation: vcFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1)  90ms both; }
-.volunteer-section.vc-ready .swiper-slide:nth-child(4) .volunteer-card { animation: vcFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 135ms both; }
-.volunteer-section.vc-ready .swiper-slide:nth-child(5) .volunteer-card { animation: vcFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 180ms both; }
-.volunteer-section.vc-ready .swiper-slide:nth-child(6) .volunteer-card { animation: vcFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 225ms both; }
-.volunteer-section.vc-ready .swiper-slide:nth-child(7) .volunteer-card { animation: vcFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 270ms both; }
-
-/* Once animation is done, lock cards permanently visible — prevents tab-switch restart */
-.volunteer-section.vc-done .volunteer-card {
-  opacity: 1 !important;
-  transform: none !important;
-  animation: none !important;
-  will-change: auto;
-}
 
 /* ============================================================
    STORIES SECTION
@@ -3480,6 +3452,4 @@ img {
   }
   /* Marquee stops completely */
   .marquee-track { animation: none !important; }
-  /* Volunteer entrance — skip to final state instantly */
-  .volunteer-section:not(.vc-ready) .volunteer-card { opacity: 1 !important; transform: none !important; }
 }
