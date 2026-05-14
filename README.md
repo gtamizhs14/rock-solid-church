@@ -19,19 +19,19 @@ No build tools. No Node. No dependencies to install.
 ## How to Run
 
 1. Clone or download the repository.
-2. Open **`rock-solid-church/index.html`** in any modern browser (Chrome, Firefox, Edge, Safari).
+2. Open **`index.html`** in any modern browser (Chrome, Firefox, Edge, Safari).
    - Double-click the file, or drag it into a browser tab.
    - All assets are loaded from CDN — an internet connection is required.
 
 ## Project Structure
 
 ```
-rock-solid-church/
 ├── index.html        # Complete HTML5 page
 ├── css/
 │   └── style.css     # All custom styles, organized by section
 ├── js/
 │   └── main.js       # AOS init, navbar scroll, countdown, Swiper, GSAP
+├── images/           # Local image assets
 └── README.md
 ```
 
