@@ -197,40 +197,6 @@ AOS.init({
   });
 })();
 
-// ---- Volunteer section entrance ----
-(function initVolunteerReveal() {
-  var swiper = document.querySelector('.volunteerSwiper');
-  if (!swiper) return;
-
-  var cards = Array.prototype.slice.call(swiper.querySelectorAll('.volunteer-card'));
-
-  // Hide all cards immediately via inline style
-  cards.forEach(function (card) {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(24px)';
-  });
-
-  var obs = new IntersectionObserver(function (entries) {
-    if (!entries[0].isIntersecting) return;
-    obs.disconnect();
-
-    cards.forEach(function (card, i) {
-      setTimeout(function () {
-        card.style.transition = 'opacity 0.55s cubic-bezier(0.22,1,0.36,1), transform 0.55s cubic-bezier(0.22,1,0.36,1)';
-        card.style.opacity = '1';
-        card.style.transform = 'none';
-
-        // After transition: strip every inline style — element is permanently clean
-        card.addEventListener('transitionend', function done() {
-          card.style.cssText = '';
-          card.removeEventListener('transitionend', done);
-        });
-      }, i * 55);
-    });
-  }, { rootMargin: '0px 0px -60px 0px' });
-
-  obs.observe(swiper);
-})();
 
 // ---- GSAP hero parallax ----
 (function initHeroParallax() {
