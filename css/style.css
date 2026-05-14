@@ -763,11 +763,10 @@ img {
    ============================================================ */
 .volunteer-section {
   background-color: var(--white);
-  background-image: radial-gradient(circle, rgba(136,136,136,0.35) 1px, transparent 1px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23888888'/%3E%3C/svg%3E");
   background-size: 24px 24px;
   padding-top: 60px;
   padding-bottom: 80px;
-  will-change: transform;
 }
 
 .volunteer-icon-wrap {
@@ -2507,7 +2506,7 @@ img {
 /* Volunteer section */
 [data-theme="dark"] .volunteer-section {
   background-color: #181818 !important;
-  background-image: radial-gradient(circle, rgba(72,72,72,0.5) 1px, transparent 1px) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23484848'/%3E%3C/svg%3E") !important;
 }
 
 /* Next Steps */
