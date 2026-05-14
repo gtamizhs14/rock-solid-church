@@ -60,6 +60,52 @@ AOS.init({
   });
 })();
 
+// ---- Bible verse of the day ----
+(function initVerseOfDay() {
+  var textEl = document.getElementById('verseText');
+  var refEl  = document.getElementById('verseRef');
+  if (!textEl || !refEl) return;
+
+  var verses = [
+    { text: 'For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.', ref: 'John 3:16' },
+    { text: 'The Lord is my shepherd; I shall not want.', ref: 'Psalm 23:1' },
+    { text: 'I can do all things through Christ who strengthens me.', ref: 'Philippians 4:13' },
+    { text: 'Trust in the Lord with all your heart and lean not on your own understanding.', ref: 'Proverbs 3:5' },
+    { text: 'Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.', ref: 'Joshua 1:9' },
+    { text: 'And we know that in all things God works for the good of those who love him.', ref: 'Romans 8:28' },
+    { text: 'Come to me, all you who are weary and burdened, and I will give you rest.', ref: 'Matthew 11:28' },
+    { text: 'For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.', ref: 'Jeremiah 29:11' },
+    { text: 'The Lord is close to the brokenhearted and saves those who are crushed in spirit.', ref: 'Psalm 34:18' },
+    { text: 'Do not be anxious about anything, but in every situation, by prayer and petition, present your requests to God.', ref: 'Philippians 4:6' },
+    { text: 'Love is patient, love is kind. It does not envy, it does not boast, it is not proud.', ref: '1 Corinthians 13:4' },
+    { text: 'But those who hope in the Lord will renew their strength. They will soar on wings like eagles.', ref: 'Isaiah 40:31' },
+    { text: 'For it is by grace you have been saved, through faith — and this is not from yourselves, it is the gift of God.', ref: 'Ephesians 2:8' },
+    { text: 'The name of the Lord is a fortified tower; the righteous run to it and are safe.', ref: 'Proverbs 18:10' },
+    { text: 'Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.', ref: 'Matthew 5:16' },
+    { text: 'For where two or three gather in my name, there am I with them.', ref: 'Matthew 18:20' },
+    { text: 'Rejoice in the Lord always. I will say it again: Rejoice!', ref: 'Philippians 4:4' },
+    { text: 'The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you.', ref: 'Numbers 6:24–25' },
+    { text: 'Create in me a pure heart, O God, and renew a steadfast spirit within me.', ref: 'Psalm 51:10' },
+    { text: 'Give thanks to the Lord, for he is good; his love endures forever.', ref: 'Psalm 107:1' },
+    { text: 'Jesus answered, I am the way and the truth and the life.', ref: 'John 14:6' },
+    { text: 'Cast all your anxiety on him because he cares for you.', ref: '1 Peter 5:7' },
+    { text: 'This is the day the Lord has made; let us rejoice and be glad in it.', ref: 'Psalm 118:24' },
+    { text: 'The peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.', ref: 'Philippians 4:7' },
+    { text: 'Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you.', ref: 'Ephesians 4:32' },
+    { text: 'Delight yourself in the Lord, and he will give you the desires of your heart.', ref: 'Psalm 37:4' },
+    { text: 'No weapon forged against you will prevail.', ref: 'Isaiah 54:17' },
+    { text: 'Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.', ref: 'Matthew 7:7' },
+    { text: 'The grass withers and the flowers fall, but the word of our God endures forever.', ref: 'Isaiah 40:8' },
+    { text: 'Even though I walk through the darkest valley, I will fear no evil, for you are with me.', ref: 'Psalm 23:4' },
+    { text: 'With God all things are possible.', ref: 'Matthew 19:26' },
+  ];
+
+  var day = new Date().getDate(); // 1–31
+  var verse = verses[(day - 1) % verses.length];
+  textEl.textContent = '“' + verse.text + '”';
+  refEl.textContent  = '— ' + verse.ref;
+})();
+
 // ---- Countdown timer ----
 (function initCountdown() {
   const timerEl = document.getElementById('countdown');

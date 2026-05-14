@@ -3441,6 +3441,83 @@ img {
 }
 
 /* ============================================================
+   BIBLE VERSE OF THE DAY
+   ============================================================ */
+.verse-section {
+  background: #faf7f4;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 48px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.verse-section::before {
+  content: '\201C';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 160px;
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-orange);
+  opacity: 0.08;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.verse-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.verse-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary-orange);
+  margin-bottom: 20px;
+}
+
+.verse-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin: 0 0 16px;
+  border: none;
+  padding: 0;
+}
+
+.verse-ref {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-orange);
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 767px) {
+  .verse-text { font-size: 18px; }
+  .verse-section { padding: 36px 20px; }
+}
+
+/* Dark mode */
+[data-theme="dark"] .verse-section {
+  background: #161616;
+  border-color: rgba(255,255,255,0.06);
+}
+
+[data-theme="dark"] .verse-text { color: #e8e8e8; }
+
+/* ============================================================
    REDUCED MOTION — accessibility + battery
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
