@@ -180,7 +180,7 @@ AOS.init({
     touchAngle: 60,
     threshold: 3,
     resistanceRatio: 0.3,
-    autoplay: { delay: 3000, disableOnInteraction: true },
+    autoplay: { delay: 3000, disableOnInteraction: false },
     pagination: {
       el: '.volunteer-pagination',
       clickable: true,
