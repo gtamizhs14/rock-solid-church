@@ -180,26 +180,23 @@ AOS.init({
     touchAngle: 60,
     threshold: 3,
     resistanceRatio: 0.3,
+    autoplay: { delay: 3000, disableOnInteraction: true },
     pagination: {
       el: '.volunteer-pagination',
       clickable: true,
     },
-    autoplay: false,
     breakpoints: {
       0: {
         slidesPerView: 2,
         spaceBetween: 12,
-        autoplay: { delay: 3000, disableOnInteraction: true },
       },
       768: {
         slidesPerView: 4,
         spaceBetween: 14,
-        autoplay: false,
       },
       1200: {
         slidesPerView: 7,
         spaceBetween: 16,
-        autoplay: false,
       },
     },
   });
