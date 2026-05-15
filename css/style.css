@@ -3472,6 +3472,23 @@ img {
   pointer-events: none;
 }
 
+.verse-section::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 260px;
+  background: radial-gradient(ellipse at center, rgba(237,75,30,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="dark"] .verse-section::after {
+  background: radial-gradient(ellipse at center, rgba(237,75,30,0.13) 0%, transparent 70%);
+}
+
 .verse-inner {
   max-width: 760px;
   margin: 0 auto;
