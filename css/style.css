@@ -3460,18 +3460,16 @@ img {
 }
 
 .verse-section::before {
-  content: '\201C';
+  content: '';
   position: absolute;
-  top: -20px;
+  top: 28px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 160px;
-  font-family: 'Playfair Display', serif;
-  color: var(--primary-orange);
-  opacity: 0.13;
-  line-height: 1;
+  width: 36px;
+  height: 2px;
+  background: var(--primary-orange);
+  border-radius: 2px;
   pointer-events: none;
-  user-select: none;
 }
 
 .verse-inner {
