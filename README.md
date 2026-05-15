@@ -2,6 +2,8 @@
 
 A pixel-perfect responsive church website built as a technical interview project for **Triumph Tech**.
 
+**Live Site:** https://gtamizhs14.github.io/rock-solid-church/
+
 ## Tech Stack
 
 | Layer | Technology |
