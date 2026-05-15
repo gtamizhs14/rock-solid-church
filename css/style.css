@@ -3457,7 +3457,6 @@ img {
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 0 100px rgba(237,75,30,0.10);
 }
 
 .verse-section::before {
